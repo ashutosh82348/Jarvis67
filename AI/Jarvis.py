@@ -182,7 +182,19 @@ if __name__== "__main__":
            speak('Just a second sir, showing you were is' +location)
            url = 'https://www.google.nl/maps/place/' + location + '/&amp;'
            webbrowser.get().open(url)
-
+        
+      # To open Webcam
+      elif "open camera" in query:
+           cap = cv2.VideoCapture(0)
+           while True:
+               ret, img = cap.read()
+               cv2.imshow('webcam', img)
+               k = cv2.waitKey(50)
+               if k==27:
+                   break;
+           cap.release()
+           cv2.destroyAllWindows()
+            
        elif 'check my internet connection' in query or 'am I connected to internet' in query:
            hostname="google.co.in"
            response=os.system("ping -c 1" +hostname)
