@@ -1,6 +1,5 @@
 #started This project On 06-09-2020
 #By Ashutosh
-#Please do not copy
 #Version 0.1
 import pyttsx3
 import speech_recognition as sr
