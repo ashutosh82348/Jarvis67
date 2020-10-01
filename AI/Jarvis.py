@@ -35,10 +35,10 @@ except Exception:
     print('some feature are not working')  
 
 emails = {
-    "admin": "multi.man.ash0192@gmail.com"
+    "admin": "recepint email id"
 }
 
-city="Sahibganj"
+city="your city"
 
 #speech to text
 engine = pyttsx3.init('sapi5')
@@ -116,8 +116,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login("assisttantBot6200@gmail.com", "xyz@1234")
-    server.sendmail("assisttantBot6200@gmail.com", to, content)
+    server.login("your email", "your pass")
+    server.sendmail("your email", to, content)
     server.close()
 
 def languagetranslator():
