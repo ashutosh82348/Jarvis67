@@ -30,7 +30,7 @@ import pyowm
 from googletrans import Translator
 import wolframalpha
 try:
-    app = wolframalpha.Client("Q539P8-JQHRU4WLJU")
+    app = wolframalpha.Client("api id")
 except Exception:
     print('some feature are not working')  
 
@@ -388,7 +388,7 @@ if __name__== "__main__":
             speak("The answer is " + answer)
 
        elif 'weather of' in query:
-            api_key="b5fa1df8dd4a28b83eb0d1f7fc54ed30"
+            api_key="your api id"
             base_url="https://api.openweathermap.org/data/2.5/weather?"
             query = query.replace("weather of", "")
             city_name = query
